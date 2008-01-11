@@ -28,14 +28,14 @@ Obsoletes:     %libname < %libname-%{version}
 %description
 %{shortname} is part of the SynCE project
 
-%package -n %libname-python
+%package -n python-%libname
 Group: System/Libraries
 Summary: SynCE: Communication application
 Provides: lib%{shortname}-python = %{version}-%{release}
 Provides: %{shortname}-python = %{version}-%{release}
 Obsoletes: %libname-python < %libname-python-%{version}
 
-%description -n %libname-python
+%description -n python-%libname
 %{shortname} is part of the SynCE project
 
 %package -n %libname-devel
@@ -60,6 +60,7 @@ perl -pi -e 's/-Werror//' lib/Makefile.in
 %make includedir=%{buildroot}%{_includedir}/rra
 
 %install
+rm -rf %{buildroot}
 %makeinstall includedir=%{buildroot}%{_includedir}/rra
 
 %post -n %{name} -p /sbin/ldconfig
@@ -81,5 +82,5 @@ perl -pi -e 's/-Werror//' lib/Makefile.in
 %_includedir/rra
 %_libdir/pkgconfig/librra.pc
 
-%files -n %{libname}-python
-%python_sitearch/pyrra.*
+%files -n python-%{libname}
+%py_platsitedir/pyrra.*
