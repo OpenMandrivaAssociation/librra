@@ -1,6 +1,6 @@
 %define name     librra
 %define shortname rra
-%define release  %mkrel 1
+%define release  %mkrel 2
 %define version  0.11
 
 %define major 0
