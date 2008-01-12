@@ -1,6 +1,6 @@
 %define name     librra
 %define shortname rra
-%define release  %mkrel 3
+%define release  %mkrel 4
 %define version  0.11
 
 %define major 0
@@ -22,7 +22,8 @@ BuildRequires: librapi-devel >= %{version}
 BuildRequires: automake
 BuildRequires: python-devel
 BuildRequires: python-pyrex
-Obsoletes:     %libname < %libname-%{version}
+Obsoletes: synce-%shortname
+
 
 %description
 %{shortname} is part of the SynCE project
@@ -32,7 +33,7 @@ Group: System/Libraries
 Summary: SynCE: Communication application
 Provides: lib%{shortname} = %{version}-%{release}
 Provides: %{shortname} = %{version}-%{release}
-Obsoletes: synce-%shortname
+Obsoletes: %libname < %libname-%{version}
 
 
 %description -n %libname
@@ -55,7 +56,6 @@ Group: System/Libraries
 Summary: SynCE: Communication application
 Provides: lib%{shortname}-devel = %{version}-%{release}
 Requires: %{libname} = %{version}-%{release}
-Conflicts: %{_lib}synce0-devel < 0.9.3
 Obsoletes: %libname-devel < %libname-devel-%{version}
 
 %description -n %libname-devel
