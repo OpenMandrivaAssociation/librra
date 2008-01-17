@@ -1,6 +1,6 @@
 %define name     librra
 %define shortname rra
-%define release  %mkrel 5
+%define release  %mkrel 6
 %define version  0.11
 
 %define major 0
@@ -44,7 +44,7 @@ Obsoletes: %libname < %libname-%{version}
 Group: System/Libraries
 Summary: SynCE: Communication application
 Provides: lib%{shortname}-python = %{version}-%{release}
-Provides: %{name}-python = %{version}-%{release}
+Provides: python-%{name} = %{version}-%{release}
 Obsoletes: %libname-python < %libname-python-%{version}
 
 %description -n python-%libname
