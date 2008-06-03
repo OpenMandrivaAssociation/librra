@@ -7,7 +7,7 @@
 Summary:	SynCE: Communication application
 Name:		librra
 Version:	0.11.1
-Release:	%{mkrel 1}
+Release:	%{mkrel 2}
 License:	MIT
 Group:		System/Libraries
 Source0:	http://prdownloads.sourceforge.net/synce/%{name}-%{version}.tar.gz
