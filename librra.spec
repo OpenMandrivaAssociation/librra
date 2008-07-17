@@ -6,15 +6,12 @@
 
 Summary:	SynCE: Communication application
 Name:		librra
-Version:	0.11.1
-Release:	%{mkrel 2}
+Version:	0.12
+Release:	%{mkrel 1}
 License:	MIT
 Group:		System/Libraries
 Source0:	http://prdownloads.sourceforge.net/synce/%{name}-%{version}.tar.gz
 Patch0:		synce-unused_var.patch
-# From upstream SVN (rev 3466): fix using the word "type" as a
-# variable name (breaks build) - AdamW 2008/06
-Patch1:		librra-0.11.1-declarator.patch
 URL:		http://synce.sourceforge.net/
 Buildroot:	%{_tmppath}/%{name}-root
 BuildRequires:	libmimedir-devel
@@ -58,7 +55,6 @@ Obsoletes:	%{mklibname rra 0 -d}
 %prep
 %setup -q
 %patch0 -p1 -b .unused-var
-%patch1 -p2 -b .declarator
 
 perl -pi -e 's/-Werror//' lib/Makefile.in
 
