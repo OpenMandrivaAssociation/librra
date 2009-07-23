@@ -6,12 +6,11 @@
 
 Summary:	SynCE: Communication application
 Name:		librra
-Version:	0.13
+Version:	0.14
 Release:	%{mkrel 1}
 License:	MIT
 Group:		System/Libraries
 Source0:	http://prdownloads.sourceforge.net/synce/%{name}-%{version}.tar.gz
-Patch0:		synce-unused_var.patch
 URL:		http://synce.sourceforge.net/
 Buildroot:	%{_tmppath}/%{name}-root
 BuildRequires:	libmimedir-devel
@@ -54,7 +53,6 @@ Obsoletes:	%{mklibname rra 0 -d}
 
 %prep
 %setup -q
-%patch0 -p1 -b .unused-var
 
 perl -pi -e 's/-Werror//' lib/Makefile.in
 
