@@ -72,7 +72,10 @@ Group:		System/Libraries
 perl -pi -e 's/-Werror//' lib/Makefile.in
 
 %build
-%configure2_5x --with-libsynce=%{_prefix} --includedir=%{_includedir}/rra
+%configure2_5x \
+	--disable-static \
+	--with-libsynce=%{_prefix} \
+	--includedir=%{_includedir}/rra
 %make includedir=%{buildroot}%{_includedir}/rra
 
 %install
