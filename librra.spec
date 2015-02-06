@@ -7,7 +7,7 @@
 Summary:	SynCE: Communication application
 Name:		librra
 Version:	0.14
-Release:	5
+Release:	6
 License:	MIT
 Group:		System/Libraries
 Url:		http://synce.sourceforge.net/
