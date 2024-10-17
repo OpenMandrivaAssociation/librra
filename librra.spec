@@ -10,7 +10,7 @@ Version:	0.14
 Release:	6
 License:	MIT
 Group:		System/Libraries
-Url:		http://synce.sourceforge.net/
+Url:		https://synce.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/synce/%{name}-%{version}.tar.gz
 BuildRequires:	python-pyrex
 BuildRequires:	libmimedir-devel
